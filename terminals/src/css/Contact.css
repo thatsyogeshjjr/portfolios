@@ -1,0 +1,35 @@
+.content {
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 12vw 2vh;
+  margin-right: 14vw;
+  margin-left: 14vw;
+}
+
+img {
+  height: 340px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    background-color: #323232;
+    border-radius: 40px;
+    margin-top: 95px;
+    width: 40vw;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    height: 140px;
+  }
+  .gap {
+    display: hidden;
+  }
+}

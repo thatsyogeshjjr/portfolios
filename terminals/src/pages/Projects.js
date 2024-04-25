@@ -1,13 +1,14 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import {
-  getDatabase,
-  ref,
-} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, onValue, get } from "firebase/database";
 import { NavBar } from "../components/NavBar.js";
 
 export var ProjectPage = () => {
-  setupDatabase();
-  return <NavBar />;
+  const projectsInDB = setupDatabase();
+  return (
+    <>
+      <NavBar />
+    </>
+  );
 };
 
 function setupDatabase() {
@@ -16,8 +17,7 @@ function setupDatabase() {
   };
 
   const app = initializeApp(appSettings);
-  const database = getDatabase(app);
-  const projects = ref(database, "projects");
+  const projects = ref(getDatabase(app), "projects");
 
-  console.log(projects);
+  return projects;
 }

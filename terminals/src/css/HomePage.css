@@ -1,0 +1,27 @@
+.content-terminal {
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 18vw 2vh;
+  margin-right: 14vw;
+  margin-left: 14vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-terminal {
+    display: relative;
+    border-radius: 40px;
+    padding: 0px;
+    width: 60vw;
+    height: 70vh;
+    margin-top: 25px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

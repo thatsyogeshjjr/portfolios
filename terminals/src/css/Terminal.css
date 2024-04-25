@@ -60,11 +60,47 @@
 }
 
 .main {
+  position: absolute;
   height: 314px;
-  width: 695px;
+  width: 600px;
 }
 
 .bg {
-  height: 215px;
-  width: 295px;
+  position: absolute;
+  translate: -140px +20%;
+  height: 290px;
+  width: 570px;
+}
+
+input {
+  background-color: #141414;
+  color: #fff;
+  border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    display: none;
+  }
+  #gap {
+    display: none;
+  }
+
+  .titlebar {
+    display: none;
+  }
+
+  .main {
+    position: relative;
+    height: 414px;
+    width: 90vw;
+    align-self: center;
+  }
 }

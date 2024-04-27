@@ -4,10 +4,26 @@ import { getDocs, collection } from "firebase/firestore";
 import { NavBar } from "../components/NavBar.js";
 import { useEffect, useState } from "react";
 import "../css/Projects.css";
+import { useRef } from "react";
 
 export var ProjectPage = () => {
   const [projData, setProjData] = useState([]);
+  var detailViewRef = useRef();
+  var oldProjectId;
   const projectCollectionRef = collection(db, "projects");
+
+  function detailPane(project) {
+    if (
+      detailViewRef.current.style.display != "none" &&
+      project.id === oldProjectId
+    ) {
+      detailViewRef.current.style.display = "none";
+    } else {
+      detailViewRef.current.style.display = "";
+      oldProjectId = project.id;
+    }
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,7 +32,6 @@ export var ProjectPage = () => {
           ...doc.data(),
           id: doc.id,
         }));
-        console.log(filteredData);
         setProjData(filteredData);
       } catch (err) {
         console.error(err);
@@ -28,16 +43,25 @@ export var ProjectPage = () => {
   return (
     <>
       <NavBar />
-      <div className="card-list">
-        {projData.map((project) => (
-          <div className="card" key={project.id}>
-            <div className="empty-space"></div>
-            <div className="card-data">
-              <h3 id="proj-name">{project.name}</h3>
-              <p id="proj-desc">{project.desc}</p>
+      <div className="content-project">
+        <div className="left" ref={detailViewRef}></div>
+        <div className="card-list right">
+          {projData.map((project) => (
+            <div
+              className="card"
+              key={project.id}
+              onClick={() => {
+                detailPane(project);
+              }}
+            >
+              <div className="empty-space"></div>
+              <div className="card-data">
+                <h3 id="proj-name">{project.name}</h3>
+                <p id="proj-desc">{project.desc}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );

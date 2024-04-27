@@ -1,34 +1,44 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, get } from "firebase/database";
+import { db } from "../config/firebase.js";
+import { getDocs, collection } from "firebase/firestore";
 import { NavBar } from "../components/NavBar.js";
 import { useEffect, useState } from "react";
+import "../css/Projects.css";
 
 export var ProjectPage = () => {
   const [projData, setProjData] = useState([]);
+  const projectCollectionRef = collection(db, "projects");
   useEffect(() => {
-    async function fetchData() {
-      var data;
-      const appSettings = {
-        databaseURL: process.env.REACT_APP_databaseURL,
-      };
-
-      const app = initializeApp(appSettings);
-      const projects = ref(getDatabase(app), "projects");
-      onValue(projects, (snapshot) => {
-        data = snapshot.val();
-      });
-      setProjData(data);
-    }
+    const fetchData = async () => {
+      try {
+        const data = await getDocs(projectCollectionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        console.log(filteredData);
+        setProjData(filteredData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
     fetchData();
   }, []);
+
   return (
     <>
       <NavBar />
-      {projData.map((item) => {
-        return <h2>{item.proj_name}</h2>;
-      })}
+      <div className="card-list">
+        {projData.map((project) => (
+          <div className="card" key={project.id}>
+            <div className="empty-space"></div>
+            <div className="card-data">
+              <h3 id="proj-name">{project.name}</h3>
+              <p id="proj-desc">{project.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
-
-function getData() {}

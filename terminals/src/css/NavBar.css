@@ -35,6 +35,7 @@
 .nav-item a {
   color: #1d1d1d;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media only screen and (max-width: 600px) {

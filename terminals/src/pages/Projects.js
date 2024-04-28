@@ -19,12 +19,10 @@ export var ProjectPage = () => {
     ) {
       detailViewRef.current.style.display = "none";
     } else {
-      console.log(project);
       detailViewRef.current.style.display = "";
       oldProjectId = project.id;
-      detailViewRef.current.innerHTML = `<h1 id='project-name-desc'>${
-        project.name
-      }</h1>
+      detailViewRef.current.innerHTML = `
+      <h1 id='project-name-desc'>${project.name}</h1>
       <p id='proj-sdesc-desc'>${project.desc}</p>
       
        <div class="weblinks">
@@ -49,6 +47,7 @@ export var ProjectPage = () => {
        <td class='info-card'>Role</td>
        <td>${project.role}</td>
      </tr>
+     <tr><td></td></tr>
      <tr>
        <td class='info-card'>Tech</td>
        <td>${project.tech}</td>
@@ -61,6 +60,7 @@ export var ProjectPage = () => {
 <h3 class='info-card'>About</h3>
 <p>${project.about}</p>
       `;
+      detailViewRef.current.scrollTop = 0;
     }
   }
 
@@ -87,7 +87,7 @@ export var ProjectPage = () => {
   return (
     <>
       <div className="content-project">
-        <div className="left" ref={detailViewRef}></div>
+        <div id="leftView" className="left" ref={detailViewRef}></div>
         <div className="card-list right">
           {projData.map((project) => (
             <div

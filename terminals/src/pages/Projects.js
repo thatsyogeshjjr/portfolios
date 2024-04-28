@@ -77,12 +77,15 @@ export var ProjectPage = () => {
         console.error(err);
       }
     };
+    const hideLeftPane = () => {
+      detailViewRef.current.style.display = "none";
+    };
+    hideLeftPane();
     fetchData();
   }, []);
 
   return (
     <>
-      <NavBar />
       <div className="content-project">
         <div className="left" ref={detailViewRef}></div>
         <div className="card-list right">

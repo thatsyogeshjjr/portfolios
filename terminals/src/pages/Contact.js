@@ -13,10 +13,18 @@ export var ContactPage = () => {
           />
         </div>
         <div className="contact-right">
-          <LinkTab name="Email" />
-          <LinkTab name="LinkedIn" />
-          <LinkTab name="Github" />
-          <LinkTab name="Twitter" />
+          <a href="mailto:yogeshjajoria2019@gmail.com">
+            <LinkTab name="Email" />
+          </a>
+          <a href="https://www.linkedin.com/in/yogesh-jjr/" target="_blank">
+            <LinkTab name="LinkedIn" />
+          </a>
+          <a href="https://github.com/thatsyogeshjjr" target="_blank">
+            <LinkTab name="Github" />
+          </a>
+          <a href="https://twitter.com/thatsyogeshjjr" target="_blank">
+            <LinkTab name="Twitter" />
+          </a>
         </div>
       </div>
     </>

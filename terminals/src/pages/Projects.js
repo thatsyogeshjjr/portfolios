@@ -19,8 +19,48 @@ export var ProjectPage = () => {
     ) {
       detailViewRef.current.style.display = "none";
     } else {
+      console.log(project);
       detailViewRef.current.style.display = "";
       oldProjectId = project.id;
+      detailViewRef.current.innerHTML = `<h1 id='project-name-desc'>${
+        project.name
+      }</h1>
+      <p id='proj-sdesc-desc'>${project.desc}</p>
+      
+       <div class="weblinks">
+         ${
+           "" === project.website
+             ? ""
+             : `<div class='info-card link'><a href=${project.website} target="_blank">Website</a></div>`
+         }
+         <div class='info-card link'>${
+           "" === project.github
+             ? "Not available"
+             : `<a href=${project.github} target="_blank">Github Repo</a>`
+         }</div>
+       </div>
+     </tr>
+  </tbody>
+</table>
+<br/>
+<table>
+   <tbody>
+     <tr>
+       <td class='info-card'>Role</td>
+       <td>${project.role}</td>
+     </tr>
+     <tr>
+       <td class='info-card'>Tech</td>
+       <td>${project.tech}</td>
+     </tr>
+     <tr>
+     </tr>
+  </tbody>
+</table>
+
+<h3 class='info-card'>About</h3>
+<p>${project.about}</p>
+      `;
     }
   }
 

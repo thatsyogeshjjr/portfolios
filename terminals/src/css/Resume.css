@@ -1,0 +1,13 @@
+.resume-content {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-content h4 a {
+  color: #1d1d1d;
+  text-decoration: underline;
+}

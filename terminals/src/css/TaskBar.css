@@ -1,0 +1,42 @@
+#taskbar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  height: 340px;
+  width: 80px;
+  color: #fff;
+  background-color: #adadad;
+  border: 2px solid #fff;
+  border-radius: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #353535;
+}
+
+.icon:active {
+  background-color: #222222;
+}
+
+@media only screen and (max-width: 600px) {
+  #taskbar {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 70vw;
+    gap: 2vw;
+    bottom: 12px;
+    justify-self: center;
+  }
+}

@@ -1,12 +1,7 @@
 import Draggable from "react-draggable";
 import "../css/TaskBar.css";
 
-export var TaskBar = (props) => {
-  // in props
-  // terminalRef, NotepadRef, CalcRef, Game1Ref, Game2Ref
-  console.log("hello!!!!!");
-  console.log(props);
-
+export var TaskBar = () => {
   function toggleShow(appId) {
     var app = document.getElementById(appId);
     app.style.display = app.style.display === "none" ? "" : "none";
@@ -36,10 +31,16 @@ export var TaskBar = (props) => {
           Web
         </div>
         <div id="game-icon" className="icon">
-          ±
-        </div>
-        <div id="calc-icon" className="icon">
           G
+        </div>
+        <div
+          id="calc-icon"
+          className="icon"
+          onClick={() => {
+            toggleShow("calculator");
+          }}
+        >
+          ±
         </div>
       </div>
     </Draggable>

@@ -16,6 +16,11 @@
   color: #ffffff;
 }
 
+#Icon {
+  display: absolute;
+  border-radius: 90px;
+  background-color: #353333;
+}
 .data {
   height: 80%;
   overflow-y: scroll;

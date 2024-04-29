@@ -1,5 +1,5 @@
 .terminal {
-  background-color: #141414;
+  background-color: #353333;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
@@ -48,8 +48,8 @@
 
 .t-btn {
   border-radius: 180px;
-  width: 23px;
-  height: 23px;
+  width: 47px;
+  height: 18px;
   border: 0;
   margin-bottom: 12px;
   background-color: #d9d9d9;
@@ -73,7 +73,11 @@
 }
 
 input {
-  background-color: #141414;
+  width: 90%;
+  background-color: #353333;
+  font-family: "Battambang", system-ui;
+  font-weight: 700;
+  font-size: 14px;
   color: #fff;
   border: none;
 }
@@ -83,6 +87,34 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+.notepad {
+  height: 362px;
+  width: 304px;
+}
+
+#textData {
+  font-family: "Battambang", system-ui;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #353333;
+  color: #fff;
+  margin: none;
+  border: none;
+}
+
+#save-btn {
+  background-color: #353333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 90px;
+  font-size: 14px;
+  width: 80px;
+}
+
+#save-btn:active {
+  background-color: #222222;
 }
 
 @media only screen and (max-width: 600px) {

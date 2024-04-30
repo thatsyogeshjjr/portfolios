@@ -9,9 +9,10 @@ export var Terminal = (props) => {
   const terminal_class = `terminal ${props.type}`;
   const commands = new Map([
     [
-      "info yogesh.jjr",
+      "cat yogesh.jjr",
       "  <h2>Yogesh Jajoria</h2><h4>Tech Fanatic</h4><h4>Programmer (JS, React, Flutter, Python, ... )</h4><h4>Violin Student</h4>",
     ],
+    ["ls", "<h5>yogesh.jjr</h5>"],
   ]);
   var inputRef = useRef("");
   var resultRef = useRef();
@@ -29,40 +30,50 @@ export var Terminal = (props) => {
   function removeApp() {
     terminalRef.current.style.display = "none";
   }
-
-  return (
-    <Draggable>
-      <div
-        id="terminal"
-        className={terminal_class}
-        onClick={focusInput}
-        ref={terminalRef}
-      >
-        <div className="titlebar">
-          <div id="title-content">{terminal_id}</div>
-          <div className="title-buttons">
-            <button className="t-btn" onClick={removeApp}></button>
-          </div>
-        </div>
-        <hr id="gap" />
-        <div className="data">
-          {props.type === "main" ? <></> : welcomeText}
-          <input
-            type="text"
-            ref={inputRef}
-            defaultValue="info yogesh.jjr"
-            on
-            onChange={(e) => displayResult(e)}
-            onEnter
-          ></input>
-          <p id="result" ref={resultRef}>
-            <h2>Yogesh Jajoria</h2>
-            <h4>Tech Fanatic</h4>
-            <h4>Programmer (JS, React, Flutter, Python, ... )</h4>
-            <h4>Violin Student</h4>
-          </p>
+  var Content = (
+    <div
+      id="terminal"
+      className={terminal_class}
+      onClick={focusInput}
+      ref={terminalRef}
+    >
+      <div className="titlebar">
+        <div id="title-content">{terminal_id}</div>
+        <div className="title-buttons">
+          <button className="t-btn" onClick={removeApp}></button>
         </div>
       </div>
-    </Draggable>
+      <hr id="gap" />
+      <div className="data">
+        {props.type === "main" ? <></> : welcomeText}
+        <input
+          type="text"
+          ref={inputRef}
+          defaultValue="cat yogesh.jjr"
+          on
+          onChange={(e) => displayResult(e)}
+          onEnter
+        ></input>
+        <p id="result" ref={resultRef}>
+          <h2>Yogesh Jajoria</h2>
+          <h4>Tech Fanatic</h4>
+          <h4>Programmer (JS, React, Flutter, Python, ... )</h4>
+          <h4>Violin Student</h4>
+        </p>
+      </div>
+    </div>
   );
+  let isMobile =
+    Math.max(
+      document.documentElement.clientWidth || 0,
+      window.innerWidth || 0
+    ) < 600;
+  function displayContent() {
+    if (!isMobile) {
+      return <Draggable>{Content}</Draggable>;
+    } else if (isMobile) {
+      return Content;
+    }
+  }
+  return displayContent();
 };

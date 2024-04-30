@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  height: 340px;
+  height: 240px;
   width: 80px;
   color: #fff;
   background-color: #adadad;
   border: 2px solid #fff;
-  border-radius: 90px;
+  border-radius: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -34,9 +34,8 @@
     display: flex;
     flex-direction: row;
     height: 80px;
-    width: 70vw;
+    width: 60vw;
     gap: 2vw;
     bottom: 12px;
-    justify-self: center;
   }
 }

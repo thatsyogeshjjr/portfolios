@@ -41,11 +41,17 @@ export var TaskBar = () => {
       >
         {">"}_
       </div>
-      <div id="web-browser-icon" className="icon">
-        Web
+      <div
+        id="console-game-icon"
+        className="icon"
+        onClick={() => {
+          toggleShow("consoleGame");
+        }}
+      >
+        G1
       </div>
       <div id="game-icon" className="icon">
-        G
+        G2
       </div>
     </div>
   );

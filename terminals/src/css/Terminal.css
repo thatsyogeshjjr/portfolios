@@ -144,9 +144,12 @@ button:focus {
   }
 
   .main {
-    position: relative;
+    position: absolute;
     height: 454px;
     width: 75vw;
     align-self: center;
+  }
+  #textData {
+    background-color: #1d1d1d;
   }
 }

@@ -4,8 +4,6 @@ import "../css/HomePage.css";
 import { Notepad } from "../components/Notepad.js";
 import { useRef, useEffect } from "react";
 
-// import "../css/TaskBar.css";
-
 export var HomePage = () => {
   var terminalRef = useRef();
   return (

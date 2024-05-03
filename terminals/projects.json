@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "proj_name": "Keylogger",
+      "desc": "An application to understand standard keyloggers and their functions.",
+      "detail_desc": {
+        "role": "dev",
+        "tech": "Python | JS | React",
+        "about": "This tries to understand advanced set of keyloggers. By re-creating its functionality in parts."
+      },
+      "website": "thatsyogeshjjr.github.io/keylogger/"
+    }
+  ]
+}

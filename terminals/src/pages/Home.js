@@ -40,7 +40,7 @@ export var HomePage = () => {
               my work.
             </p>
             <button className="cta-btn">
-              <Link to="/projects">My Projects</Link>
+              <Link to="/projects">Check out my projects</Link>
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Terminal } from "../components/Terminal.js";
 import { TaskBar } from "../components/TaskBar.js";
 import { Notepad } from "../components/Notepad.js";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "../css/HomePage.css";
 
 export var HomePage = () => {
@@ -25,6 +26,7 @@ export var HomePage = () => {
           </div>
 
           <div id="about">
+            <h2>About me</h2>
             <p>
               As a student and self-taught programmer, my journey in the world
               of technology has been one of continuous growth and exploration.
@@ -37,7 +39,9 @@ export var HomePage = () => {
               you to explore my projects and reach out to me to learn more about
               my work.
             </p>
-            <button className="cta-btn">Check out my projects</button>
+            <button className="cta-btn">
+              <Link to="/projects">My Projects</Link>
+            </button>
           </div>
         </div>
       </div>

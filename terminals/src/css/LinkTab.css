@@ -9,6 +9,11 @@
   border-radius: 8px;
   padding-left: 19px;
   margin-bottom: 12px;
+  transition: all 0.2s ease-in;
+}
+
+.tab:hover {
+  transform: translateX(20px);
 }
 
 .circle {

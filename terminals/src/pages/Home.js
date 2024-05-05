@@ -15,9 +15,9 @@ export var HomePage = () => {
         <Notepad />
       </div> */}
       <div className="hero-home">
-        <div id="img"></div>
+        <div id="img" className="fade-in"></div>
         <div className="info-home">
-          <div id="name">
+          <div id="name" className="move-in-left">
             <h2>YOGESH JAJORIA</h2>
 
             <div id="titles">
@@ -25,7 +25,7 @@ export var HomePage = () => {
             </div>
           </div>
 
-          <div id="about">
+          <div id="about" className="fade-in">
             <h2>About me</h2>
             <p>
               As a student and self-taught programmer, my journey in the world
@@ -39,7 +39,7 @@ export var HomePage = () => {
               you to explore my projects and reach out to me to learn more about
               my work.
             </p>
-            <button className="cta-btn">
+            <button className="cta-btn fade-in">
               <Link to="/projects">Check out my projects</Link>
             </button>
           </div>

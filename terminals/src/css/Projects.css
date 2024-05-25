@@ -36,8 +36,8 @@ td {
   height: 60vh;
   padding: 20px;
   border-radius: 18px;
-  background-color: #323232;
-  color: #fff;
+  background-color: #adadad;
+  color: #000;
   overflow-y: scroll;
 }
 
@@ -49,8 +49,8 @@ td {
 }
 
 .info-card {
-  background-color: #525252;
-  color: #fff;
+  border-bottom: 1px solid #000;
+  color: #000;
   width: 130px;
   border-radius: 30px;
   text-align: center;
@@ -59,7 +59,7 @@ td {
 
 #project-name-desc {
   text-decoration: none;
-  text-align: center;
+  font-size: 1.5em;
   margin-bottom: 0px;
 }
 
@@ -80,12 +80,31 @@ a {
 }
 
 .link {
-  border: 3px solid #fff;
-  background-color: #1e1e1e;
+  border-radius: 15px;
+  width: 140px;
+  height: 30px;
+  padding: 8px 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d9d9d9;
+  color: #000;
+}
+
+.link a {
+  color: #000;
+}
+
+.link img {
+  animation: fade-in 0.3s ease;
+  transition: transform 0.3s ease;
+  width: 1em;
+  height: 1em;
 }
 
 .weblinks {
   display: flex;
+  justify-content: center;
   direction: row;
   gap: 13px;
   margin-left: 15px;
@@ -135,10 +154,10 @@ a {
   }
 
   .left {
-    background-color: #323232;
-    color: #fff;
+    margin: 2em 0em;
     width: 92vw;
-    height: 98vh;
+    /* height: 98vh; */
+    height: 400vh;
   }
 
   .info-card {

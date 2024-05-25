@@ -24,19 +24,20 @@ export var ProjectPage = () => {
       detailViewRef.current.innerHTML = `
       <h1 id='project-name-desc'>${project.name}</h1>
       <p id='proj-sdesc-desc'>${project.desc}</p>
-      
+      <br/>
        <div class="weblinks">
          ${
            "" === project.website
              ? ""
-             : `<div class='info-card link'><a href=${project.website} target="_blank">Website</a></div>`
+             : `<div class='info-card link'><img src="/link_icon.png"></img><a href=${project.website} target="_blank">Website</a></div>`
          }
          <div class='info-card link'>${
            "" === project.github
              ? "Not available"
-             : `<a href=${project.github} target="_blank">Github Repo</a>`
+             : `<img src="/link_icon.png"></img><a href=${project.github} target="_blank">Github Repo</a>`
          }</div>
        </div>
+       <br/>
      </tr>
   </tbody>
 </table>

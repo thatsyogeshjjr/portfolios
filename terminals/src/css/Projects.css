@@ -22,7 +22,7 @@
 }
 
 .right {
-  margin-right: 49px;
+  margin-right: 1em;
   overflow-y: scroll;
 }
 
@@ -32,7 +32,7 @@ td {
 }
 
 .left {
-  width: 60%;
+  width: 90%;
   height: 60vh;
   padding: 20px;
   border-radius: 18px;
@@ -44,6 +44,8 @@ td {
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-card {
@@ -122,7 +124,6 @@ a {
 @media only screen and (max-width: 600px) {
   .card-list {
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
   }
@@ -136,7 +137,7 @@ a {
   .left {
     background-color: #323232;
     color: #fff;
-    width: 85vw;
+    width: 92vw;
     height: 98vh;
   }
 

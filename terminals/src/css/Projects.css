@@ -138,6 +138,8 @@ a {
 
 #proj-desc {
   margin-right: 5px;
+  height: 7em;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 600px) {

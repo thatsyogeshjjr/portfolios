@@ -40,6 +40,52 @@ export var ProjectPage = () => {
        <br/>
      </tr>
   </tbody>
+
+        <div class='image-section'>
+        
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[0] == undefined
+            ? ""
+            : project.images[0]
+        }></img>
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[1] == undefined
+            ? ""
+            : project.images[1]
+        }></img>
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[2] == undefined
+            ? ""
+            : project.images[2]
+        }></img>
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[3] == undefined
+            ? ""
+            : project.images[3]
+        }></img>
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[4] == undefined
+            ? ""
+            : project.images[4]
+        }></img>
+        <img src=${
+          project.images == undefined
+            ? ""
+            : project.images[5] == undefined
+            ? ""
+            : project.images[5]
+        }></img>
+        </div>
 </table>
 <br/>
 <table>

@@ -1,5 +1,8 @@
 import "./App.css";
 import backgroundImg from "./assets/bg.png";
+import GithubIcon from "./assets/github.png";
+import LinkedInIcon from "./assets/linkedIn.png";
+import TwitterIcon from "./assets/twitter.png";
 
 function App() {
   return (
@@ -12,6 +15,17 @@ function App() {
         >
           <img src={backgroundImg} alt="" className="w-min justify-center" />
           <div className="*:m-6">
+            <div id="icons" className="flex justify-center gap-4 h-6 *:*:h-7">
+              <a href="https://github.com/thatsyogeshjjr" target="_blank">
+                <img src={GithubIcon} alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/yogesh-jjr/" target="_blank">
+                <img src={LinkedInIcon} alt="" />
+              </a>
+              <a href="https://twitter.com/thatsyogeshjjr" target="_blank">
+                <img src={TwitterIcon} alt="" />
+              </a>
+            </div>
             <h2 className="font-semibold text-5xl ">Yogesh Jajoria</h2>
             <p className="text-md">
               <span>Your friendly neighbourhood</span>

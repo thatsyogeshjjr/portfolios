@@ -31,7 +31,8 @@ function App() {
             <p className="text-md">
               <span>Your friendly neighbourhood</span>
               <br />
-              <span>programmer_</span>
+              <span>programmer</span>
+              <span className="animate-pulse">_</span>
             </p>
             <Link to="/projects">
               <button className="bg-slate-200 font-semibold rounded-md p-1 text-slate-950 w-40">

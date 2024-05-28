@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./App.css";
 import backgroundImg from "./assets/bg.png";
 import GithubIcon from "./assets/github.png";
@@ -32,9 +33,11 @@ function App() {
               <br />
               <span>programmer_</span>
             </p>
-            <button className="bg-slate-200 font-semibold rounded-md p-1 text-slate-950 w-40">
-              My Projects
-            </button>
+            <Link to="/projects">
+              <button className="bg-slate-200 font-semibold rounded-md p-1 text-slate-950 w-40">
+                My Projects
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -21,12 +21,12 @@ export var ProjectsPage = () => {
           <ProjectCard
             link="https://github.com/thatsyogeshjjr/socket_projects"
             name="PomoFocus"
-            desc="A simple Pomodoro Timer app that works on desktops. Build in ElectronJS."
+            desc="A Pomodoro Timer app built in ElectronJS."
             bgImg=""
           />
           <ProjectCard
             link="https://github.com/thatsyogeshjjr/socket_projects"
-            name="Socket Projects"
+            name="Socket Adventures"
             desc="Exploring networking capabilities of python with sockets."
             bgImg=""
           />

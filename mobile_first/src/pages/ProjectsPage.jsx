@@ -15,7 +15,7 @@ export var ProjectsPage = () => {
           <ProjectCard
             link="https://thatsyogeshjjr.github.io/keylogger/"
             name="Keylogger"
-            desc="An application to understand standard keyloggers and their functions."
+            desc="Understanding keyloggers and their functions with Python"
             bgImg=""
           />
           <ProjectCard

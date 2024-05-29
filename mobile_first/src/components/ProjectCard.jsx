@@ -17,7 +17,7 @@ export var ProjectCard = (props) => {
       <a href={props.link} target="_blank">
         <div
           // style={{ backgroundImage: `url("${props.bgImg}")` }}
-          className="border rounded-lg border-solid border-white w-80 h-40 hover:border-slate-400 hover:text-slate-400 *:m-2"
+          className="border-2 rounded-lg border-solid border-white w-80 h-40 hover:border-slate-400 hover:text-slate-400 active:border-slate-500 active:text-slate-500 *:m-2"
         >
           <div id="content" className="flex flex-col">
             <h2 className="font-bold text-xl p-6 text-center">{props.name}</h2>

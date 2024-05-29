@@ -36,6 +36,12 @@ export var ProjectsPage = () => {
             desc="Automate your gitub repository creation with powershell."
             bgImg=""
           />
+          <ProjectCard
+            link="https://github.com/thatsyogeshjjr/"
+            name="Find more projects..."
+            desc="For more projects view my github repos"
+            bgImg=""
+          />
         </div>
 
         <div id="empty"></div>

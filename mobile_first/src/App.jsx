@@ -14,7 +14,11 @@ function App() {
           id="content"
           className="flex flex-col items-center text-start *:m-2 w-screen"
         >
-          <img src={backgroundImg} alt="" className="w-min justify-center" />
+          <img
+            src={backgroundImg}
+            alt=""
+            className="justify-center h-40 w-max"
+          />
           <div className="*:m-6">
             <div id="icons" className="flex justify-center gap-4 h-6 *:*:h-7">
               <a href="https://github.com/thatsyogeshjjr" target="_blank">
@@ -35,7 +39,10 @@ function App() {
               <span className="animate-pulse">_</span>
             </p>
             <Link to="/projects">
-              <button className="bg-slate-200 font-semibold rounded-md p-1 text-slate-950 w-40">
+              <button
+                style={{ backgroundColor: "#212121" }}
+                className="font-semibold rounded-md p-1 text-slate-100 w-40 border-4 border-double border-white"
+              >
                 My Projects
               </button>
             </Link>

@@ -11,6 +11,11 @@
   }
 }
 
+.hidden-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .content-project {
   margin-left: 30px;
   margin: 12px;
@@ -45,7 +50,6 @@ td {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 }
 
 .info-card {
@@ -156,9 +160,12 @@ a {
 
 @media only screen and (max-width: 600px) {
   .card-list {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .content-project {

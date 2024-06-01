@@ -41,7 +41,7 @@ export var ProjectPage = () => {
      </tr>
   </tbody>
 
-        <div class='image-section'>
+        <div class='image-section hidden-scroll'>
         
         <img src=${
           project.images == undefined
@@ -134,8 +134,12 @@ export var ProjectPage = () => {
   return (
     <>
       <div className="content-project">
-        <div id="leftView" className="left" ref={detailViewRef}></div>
-        <div className="card-list right">
+        <div
+          id="leftView"
+          className="left hidden-scroll"
+          ref={detailViewRef}
+        ></div>
+        <div className="card-list right hidden-scroll">
           {projData.map((project) => (
             <div
               className="card"

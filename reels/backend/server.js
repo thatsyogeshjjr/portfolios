@@ -77,4 +77,6 @@ app.get("/api/v1/projects", (req, res) => {
   ]);
 });
 
+app.use("/login", loginRoutes);
+
 app.listen(PORT, () => console.log(`Server started @ localhost:${PORT}`));

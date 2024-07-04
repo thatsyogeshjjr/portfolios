@@ -68,7 +68,7 @@ app.get("/api/v1/projects", (req, res) => {
       video: "./assets/sample.mp4",
       link: "https://github.com/thatsyogeshjjr/keylogger",
       blog: "",
-      stack: ["python", "cryptography", "sockets"],
+      stack: ["Python", "Cryptography", "Sockets"],
       icon: "",
       title: "Keylogger",
       description:
